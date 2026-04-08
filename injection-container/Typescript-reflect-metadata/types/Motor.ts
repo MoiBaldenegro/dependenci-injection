@@ -9,7 +9,7 @@ export abstract class Motor {
     abstract getAttributes(): string;
 }
 
-@injectable([Piston], ["V6", "Diesel"], lifeTime.SCOPED)
+@injectable({ lifetime: lifeTime.TRANSIENT, primitives: ["V6", "Diesel"] })
 export class MotorImpl implements Motor {
     id : string;
     constructor(

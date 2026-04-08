@@ -8,7 +8,7 @@ export abstract class Vehicule {
     abstract get(): any;
 }
 
-@injectable([Motor], ["Toyota", "Corolla"], lifeTime.TRANSIENT)
+@injectable({ lifetime: lifeTime.TRANSIENT, primitives: ["Toyota", "Corolla"] })
 export class VehiculeImpl implements Vehicule {
     constructor(
         public motor: Motor,

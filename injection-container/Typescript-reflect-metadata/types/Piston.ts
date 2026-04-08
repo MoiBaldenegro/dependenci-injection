@@ -7,7 +7,7 @@ export abstract class Piston{
     abstract getAttributes(): string;
 }
 
-@injectable([], ["TipoX", "Gasolina"], lifeTime.TRANSIENT)
+@injectable({ lifetime: lifeTime.TRANSIENT, primitives: ["TipoX", "Gasolina"] })
 export class PistonImpl implements Piston {
     public id : string;
 

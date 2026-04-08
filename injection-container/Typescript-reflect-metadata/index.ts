@@ -9,7 +9,6 @@ service.register(Piston, PistonImpl);
 service.register(Motor, MotorImpl);
 service.register(Vehicule, VehiculeImpl);
 
-
 function main() {
 
    const scope = service.createScope();
