@@ -8,7 +8,7 @@ export abstract class Vehicule {
     abstract get(): any;
 }
 
-@injectable({ lifetime: lifeTime.TRANSIENT, primitives: ["Toyota", "Corolla"] })
+@injectable()
 export class VehiculeImpl implements Vehicule {
     constructor(
         public motor: Motor,
@@ -18,7 +18,7 @@ export class VehiculeImpl implements Vehicule {
     }
 
     get() {
-        return "soy un carro: " + this.motor.getAttributes();
+        return `Vehiculo: ${this.marca} ${this.modelo}, con motor: ${this.motor.getAttributes()}`;
     }
 }
 

@@ -1,4 +1,3 @@
-import { lifeTime } from "../constants/lifetimes";
 import { injectable } from "../injectable/injectable";
 import { Piston } from "./Piston";
 
@@ -9,7 +8,7 @@ export abstract class Motor {
     abstract getAttributes(): string;
 }
 
-@injectable({ lifetime: lifeTime.TRANSIENT, primitives: ["V6", "Diesel"] })
+@injectable()
 export class MotorImpl implements Motor {
     id : string;
     constructor(
