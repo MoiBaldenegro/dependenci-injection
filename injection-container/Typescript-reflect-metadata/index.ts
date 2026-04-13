@@ -29,8 +29,6 @@ function main() {
     console.log(vehicule.get());
     console.log(vehicule_dos.get());
     console.log(vehicule_tres.get());
-
-
 }
 
 main();
